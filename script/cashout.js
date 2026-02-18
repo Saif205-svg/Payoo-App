@@ -21,10 +21,10 @@ document.getElementById("cashout-btn").addEventListener('click',function(){
         alert("Invalid Amount");
         return;
     }console.log("New Balance: "+myNewBalance);
-    // get pinNumber
+    //get pin number
     const getPinNumber = document.getElementById("cashout-pin");
     const myPin = getPinNumber.value;
-    // check pin validation
+    //check pin validation
     if(myPin === '1234'){
         alert('Cashout Successful');
         currentBalance.innerText = myNewBalance;
