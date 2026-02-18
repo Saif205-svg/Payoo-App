@@ -1,21 +1,20 @@
-document.getElementById("login-btn").addEventListener("click",function(){
-   //step 1--> get the mobile number
-   const numberInput = document.getElementById("input-number");
-   const inputValue = numberInput.value;
-   console.log(inputValue);
-   //step 2--> get the pin number
-   const pinNumber = document.getElementById("input-pin");
-   const pinValue = pinNumber.value;
-   console.log(pinValue);
-   //step 3--> match the pin number
-   if(inputValue == '01234567890' && pinValue == '1234'){
-    //step 4--> when true step 1 & 3 alert>> homepage
-    alert("Login Successful")
-   } else{
-    //step 5--> when false step 1 & 3 alert>> return
-    alert("Login Failed")
-    return;
-   }
-   
-   
+document.getElementById("login-btn").addEventListener("click", function(){
+    //get the phone number
+    const getNumber = document.getElementById("input-number");
+    const numberValue = getNumber.value;
+    console.log(numberValue);
+
+    // get the pin number
+    const getPin = document.getElementById("input-pin");
+    const pinValue = getPin.value;
+    console.log(pinValue);
+
+    //math the pin & phone number
+    if(numberValue == "01234567890" && pinValue == "1234"){
+        alert("Login Successful")
+        window.location.assign("/home.html");
+    } else{
+        alert("Login Failed");
+        return;
+    }
 })
